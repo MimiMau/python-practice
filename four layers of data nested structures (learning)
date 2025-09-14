@@ -38,14 +38,16 @@ hospital_data = {
 for title, heads, in hospital_data.items():
     print (f"{title}-")
     for head in heads:
-        print (f"  {head ['Doctor']} ")
+        print (f"  {head ['Doctor']}. ")
+        print ("    Patients:")
         for patient in head ["Patients"]:
-            print (f"     {patient ['Name']}, Age: {patient ['Age']}")
-            print (f"       Medication: {patient['Medication']}")
+            print (f"      {patient ['Name']}, Age: {patient ['Age']}")
+            print (f"    Medication: {patient['Medication']}")
+            print ("    Dosage:")
             for meds, how_many in patient["Dosage"].items():
                 print (f"         {meds}: {how_many}")
     print ("___\n")
-    
+
 
 
 
