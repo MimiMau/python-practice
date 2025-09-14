@@ -1,0 +1,58 @@
+hospital_data = {
+    "Cardiology":[
+        {"Doctor": "Dr. Ethan", "Patients":[
+            {"Name": "Linda", "Age": 19, "Medication": "Aspirin and Antibiotics", "Dosage": {"Days": 5, "Times": 3}},
+            {"Name": "Luke", "Age": 34, "Medication": "Antibiotics and Panadol", "Dosage": {"Days": 7, "Times": 3}}
+
+        ]},
+        {"Doctor": "Dr. Mo", "Patients": [
+            {"Name": "Mary", "Age": 13, "Medication": "Benzydamine and Antibiotics", "Dosage": {"Days": 3, "Times": 1}},
+            {"Name": "Janeth", "Age": 26, "Medication": "Panadol", "Dosage": {"Days": 3, "Times": 2}}
+        ]}
+    ],
+
+    "Pediatrician": [
+        {"Doctor": "Dr. Kyle", "Patients": [
+            {"Name": "Joe", "Age": 45, "Medication":  "Antibiotics and Calcipotriol", "Dosage": {"Days": 5, "Times": 1}},
+            {"Name": "Jerome", "Age": 50, "Medication": "Aspirin and Cefalexin", "Dosage": {"Days": 3, "Times": 2}}
+        ]},
+        {"Doctor": "Dr. Samuel", "Patients":[
+            {"Name": "Janeth", "Age": 30, "Medication": "Acrivastine", "Dosage": {"Days": 5, "Times": 2}},
+            {"Name": "Hilda", "Age": 29, "Medication": "Baclofen", "Dosage": {"Days": 7, "Times": 3 }}
+        ]}
+    ],
+
+    "Oncologist": [
+        {"Doctor": "Dr. John", "Patients":[
+            {"Name": "Linda", "Age": 52, "Medication": "Dabigatran", "Dosage":{"Days": 3, "Times": 1}},
+            {"Name": "Natasha", "Age": 40, "Medication": "Haloperidol", "Dosage": {"Days": 4, "Times": 3}}
+        ]},
+        {"Doctor": "Dr. Mary", "Patients":[
+            {"Name": "Naa", "Age": 18, "Medication": "Benzydamine and Antibiotics", "Dosage": {"Days": 3, "Times": 1}},
+            {"Name": "June", "Age": 16, "Medication": "Panadol", "Dosage": {"Days": 3, "Times": 2}}
+        ]}
+    ]
+
+}
+
+for title, heads, in hospital_data.items():
+    print (f"{title}-")
+    for head in heads:
+        print (f"  {head ['Doctor']} ")
+        for patient in head ["Patients"]:
+            print (f"     {patient ['Name']}, Age: {patient ['Age']}")
+            print (f"       Medication: {patient['Medication']}")
+            for meds, how_many in patient["Dosage"].items():
+                print (f"         {meds}: {how_many}")
+    print ("___\n")
+    
+
+
+
+
+
+
+
+
+
+
