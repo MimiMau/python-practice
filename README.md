@@ -1,4 +1,4 @@
-Hi there! 👋 I'm Maua, an aspiring software engineer on a journey to master Python. This repository serves as my learning playground, where I practice exercises, mini-projects, and small management systems as I develop my coding skills.  
+Hi there! 👋 I'm Maua, an aspiring software engineer/ backend coder on a journey to master Python. This repository serves as my learning playground, where I practice exercises, mini-projects, and small management systems as I develop my coding skills.  
 
 What you'll probably find here.
 - Loops and conditions  
