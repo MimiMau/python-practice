@@ -27,3 +27,15 @@ school = {
         ]}
     ]
 }
+
+for form, educators in school.items():
+    print (f"{form}")
+    for educator in educators:
+        print (f"{educator["Teacher"]}")
+        print ("  Classes:")
+        for classroom in educator["Classes"]:
+            print (f"  {classroom['Class']}")
+            print ("  Students:")
+            for student in classroom["Students"]:
+                print (f"    {student['Name']}, Grade: {student['Grade']}")
+    print ("___\n")
