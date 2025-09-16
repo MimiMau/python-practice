@@ -1,0 +1,29 @@
+school = {
+    "High School": [
+        {"Teacher": "Mr. Smith", "Classes": [
+            {"Class": "10A", "Students": [
+                {"Name": "Liam", "Grade": 82},
+                {"Name": "Emma", "Grade": 91}
+            ]},
+            {"Class": "11B", "Students": [
+                {"Name": "Noah", "Grade": 75},
+                {"Name": "Olivia", "Grade": 89}
+            ]}
+        ]},
+        {"Teacher": "Ms. Johnson", "Classes": [
+            {"Class": "12C", "Students": [
+                {"Name": "Sophia", "Grade": 95},
+                {"Name": "Mason", "Grade": 67}
+            ]}
+        ]}
+    ],
+
+    "Middle School": [
+        {"Teacher": "Mr. Brown", "Classes": [
+            {"Class": "7A", "Students": [
+                {"Name": "Isabella", "Grade": 88},
+                {"Name": "James", "Grade": 79}
+            ]}
+        ]}
+    ]
+}
