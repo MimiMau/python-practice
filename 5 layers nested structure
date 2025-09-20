@@ -1,0 +1,47 @@
+government = {
+    "Ministry of Health": [
+        {"Minister": "Dr. Alice", "Departments": [
+            {"Department": "Public Health", "Officers": [
+                {"Name": "John", "Role": "Epidemiologist", "Tasks": {"Task1": "Track disease", "Task2": "Report statistics"}},
+                {"Name": "Mary", "Role": "Nurse", "Tasks": {"Task1": "Vaccinations", "Task2": "Patient care"}}
+            ]},
+            {"Department": "Hospital Services", "Officers": [
+                {"Name": "Paul", "Role": "Surgeon", "Tasks": {"Task1": "Surgery", "Task2": "Post-op care"}}
+            ]}
+        ]},
+        {"Minister": "Dr. Bob", "Departments": [
+            {"Department": "Medical Research", "Officers": [
+                {"Name": "Anna", "Role": "Researcher", "Tasks": {"Task1": "Lab experiments", "Task2": "Publish papers"}}
+            ]}
+        ]}
+    ],
+
+    "Ministry of Education": [
+        {"Minister": "Prof. Carol", "Departments": [
+            {"Department": "Primary Education", "Officers": [
+                {"Name": "Liam", "Role": "Inspector", "Tasks": {"Task1": "Visit schools", "Task2": "Report findings"}},
+                {"Name": "Emma", "Role": "Teacher Trainer", "Tasks": {"Task1": "Workshops", "Task2": "Mentoring"}}
+            ]},
+            {"Department": "Higher Education", "Officers": [
+                {"Name": "Noah", "Role": "University Liaison", "Tasks": {"Task1": "Coordinate programs", "Task2": "Policy review"}}
+            ]}
+        ]}
+    ]
+}
+for agency, ministers in government.items():
+    print (f"{agency}")
+    for minister in ministers:
+        print (f"Minister: {minister ['Minister']}")
+        print (" Departments:")
+        for department in minister ["Departments"]:
+            print (f"   {department ['Department']}")
+            print (" Officers:")
+            for officer in department["Officers"]:
+                print (f"   Name: {officer['Name']}, Role: {officer['Role']}.")
+                for key, value in officer["Tasks"].items():
+                    print (f"      {key}: {value}")
+    print ("___\n")
+
+
+
+
