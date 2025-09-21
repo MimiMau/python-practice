@@ -1,0 +1,48 @@
+government = {
+    "Ministry of Technology": [
+        {"Minister": "Dr. Kevin", "Departments": [
+            {"Department": "Innovation", "Officers": [
+                {"Name": "Alice", "Role": "Researcher", "Tasks": {"Task 1": "Prototype Design", "Task 2": "Tasting"}},
+                {"Name": "Mark", "Role": "Inspector", "Tasks": {"Task 1": "Quality check", "Task 2": "Report Findings"}}
+            ]},
+            {"Department": "Cyber Security", "Officers": [
+                {"Name": "Nina", "Role": "Analyst",
+                 "Tasks": {"Task 1": "Threat Detection", "Task 2": "Incident Report"}}
+            ]}
+        ]}
+    ],
+
+    "Ministry of Agriculture": [
+        {"Minister": "Dr. Grace", "Departments": [
+            {"Department": "Department of Science", "Officers": [
+                {"Name": "Tom", "Role": "Farmer Liaison",
+                 "Tasks": {"Task 1": "Farmer Training", "Task 2": "Field Report"}}
+            ]},
+            {"Department": "Animal Health", "Officers": [
+                {"Name": "Dr. Sara", "Role": "Veterinarian",
+                 "Tasks": {"Task 1": "Animal Treatment", "Task 2": "Vaccination Programs"}}
+            ]}
+        ]}
+    ]
+}
+for section, ministries in government.items():
+    print (f"{section}")
+    for minister in ministries:
+        print (f"Minister: {minister['Minister']}")
+        print ("Departments:")
+        for department in minister["Departments"]:
+            print (f"  {department['Department']}")
+            print ("Officers:")
+            for officer in department["Officers"]:
+                if officer ['Role'] == "Inspector":
+                    print (f"  {officer['Name']} is an inspector")
+                else:
+                    print (f"  Name: {officer['Name']}, Role: {officer ['Role']} ")
+                    for key, value in officer["Tasks"].items():
+                        if "Report" in value:
+                          print (f"     {key} {value}🥸")
+                        else:
+                            print (f"   {key} {value}")
+    print ("___\n")
+
+
