@@ -1,0 +1,48 @@
+university = {
+    "Faculty of Art & Humanities": [
+        {"Professor": "Prof. Adam", "Courses": [
+            {"Course": "History", "Students": [
+                {"Name": "Anna", "Grade": 3, "Attendants": {"Half Term": "70%", "Full Term": "65%"}},
+                {"Name": "Jordan", "Grade": 4, "Attendants": {"Half Term": "80%", "Full Term": "45%"}}
+            ]},
+
+        ]}
+    ],
+
+    "Faculty of Science": [
+        {"Professor": "Prof. Grace", "Courses": [
+            {"Course": "Physics", "Students": [
+                {"Name": "Daniel", "Grade": 5, "Attendants": {"Half Term": "95%", "Full Term": "90%"}},
+                {"Name": "Lina", "Grade": 2, "Attendants": {"Half Term": "60%", "Full Term": "50%"}}
+            ]},
+            {"Course": "Chemistry", "Students": [
+                {"Name": "Noah", "Grade": 4, "Attendants": {"Half Term": "85%", "Full Term": "75%"}},
+                {"Name": "Eva", "Grade": 3, "Attendants": {"Half Term": "70%", "Full Term": "65%"}}
+            ]}
+        ]}
+    ]
+}
+
+for faculty, classrooms in university.items():
+    print (f"{faculty}")
+    for classroom in classrooms:
+        print (f"Professor: {classroom['Professor']}")
+        print ("Courses:")
+        for course in classroom["Courses"]:
+            print (f"  {course['Course']}:")
+            print ("Students:")
+            for student in course["Students"]:
+                print (f"  Name: {student['Name']}, Grade: {student['Grade']}")
+                print ("Attendants:")
+                for key, value in student["Attendants"].items():
+                    percent = int(value.replace("%", ""))
+                    if value <= "50%":
+                        print(f"  {key}: {percent}%: Is doing poorly. ⚠️")
+                    elif value < "75%":
+                            print(f"  {key}: {percent}%: Needs to be careful 〽️")
+                    else:
+                            print (f"  {key}: {value}")
+    print ("___\n")
+
+
+
